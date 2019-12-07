@@ -1,3 +1,4 @@
+import 'package:brewcrew/Services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -6,6 +7,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  final AuthService _authService = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,8 +18,8 @@ class _HomeState extends State<Home> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.person, color: Colors.white,),
-            onPressed: (){
-              
+            onPressed: () async{
+              await _authService.signOut();
             },
           )
         ],
