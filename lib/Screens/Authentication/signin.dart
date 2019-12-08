@@ -30,14 +30,14 @@ class _SignInState extends State<SignIn> {
         title: Text("Sign In"),
         actions: <Widget>[
           FlatButton.icon(
-            label: Text("Register"),
-            icon: Icon(Icons.person),
+            label: Text("Register", style: TextStyle(color: Colors.white),),
+            icon: Icon(Icons.person, color: Colors.white,),
             onPressed: (){
               widget.toggle();
             },
           )
         ],
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.brown[900],
       ),
       body: Container(
         color: Colors.brown[100],

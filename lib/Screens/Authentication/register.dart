@@ -30,14 +30,14 @@ class _RegisterState extends State<Register> {
           title: Text("Register"),
           actions: <Widget>[
           FlatButton.icon(
-            label: Text("Sign In"),
-            icon: Icon(Icons.person),
+            label: Text("Sign In", style: TextStyle(color: Colors.white),),
+            icon: Icon(Icons.person, color: Colors.white,),
             onPressed: (){
               widget.toggle();
             },
           )
         ],
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.brown[900],
         ),
         body: Container(
           color: Colors.brown[100],
@@ -84,7 +84,6 @@ class _RegisterState extends State<Register> {
                         });
                       }
                     }
-                    
                   },
                 ),
                 Text(
@@ -93,7 +92,6 @@ class _RegisterState extends State<Register> {
                 )
               ],
             )
-  
           )
         ),
       );
